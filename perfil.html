@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Getinfo - Perfil</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <link rel="stylesheet" href="static/style.css">
+
+</head>
+
+<body>
+    <!-- Início Header -->
+    <header class="p-3 mb-5 border-bottom header-shadow-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <!-- Logo -->
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                </a>
+
+                <!-- Lista de itens -->
+                <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
+                    <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
+                    <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+                    <li><a href="como-doar.html" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contatos.html" class="nav-link px-2 link-dark">Contato</a></li>
+                </ul>
+
+                <!-- Icone do usuário com dropdown -->
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/pessoa.jpg" alt="icon-person" width="32" height="32"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="perfil.html#info">Perfil</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#historico-doacoes">Doações Realizadas</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#campanhas-favoritas">Campanhas Favoritas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fim Header -->
+
+    <main>
+        <section id="perfil">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 col-md-4 text-end">
+                        <div class="image-profile">
+                            <img src="assets/images/pessoa.jpg" alt="Imagem de perfil da pessoa" class="rounded-circle">
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-8">
+                        <div class="header-usuario mt-4">
+                            <h4>Lorem Ipsum da Silva Santos</h4>
+                        </div>
+                        <div class="navegacao-profile">
+                            <ul class="nav nav-tabs" id="abaUsuario" role="tablist">
+                                <li class="nav-item">
+                                    <a class="nav-link active" id="info-tab" data-bs-toggle="tab" href="#info" role="tab" aria-controls="info" aria-selected="true">Informações</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="historico-doacoes-tab" data-bs-toggle="tab" href="#historico-doacoes" role="tab" aria-controls="historico-doacoes" aria-selected="false">Doações Realizadas</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" id="campanhas-favoritas-tab" data-bs-toggle="tab" href="#campanhas-favoritas" role="tab" aria-controls="campanhas-favoritas" aria-selected="false">Campanhas Salvas</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="tab-content" id="abaUsuarioConteudo">
+                            <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info-tab">
+                                <div class="row mt-3 dados-perfil">
+                                    <div class="col-md-6">
+                                        <label>Nome Completo:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Lorem Ipsum Dolor Sit</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Endereço de E-mail:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>lorem@souunit.com.br</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Número de Telefone:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>(79) 99999-9999</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>CPF:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>111.***.***-22</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>CEP:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>1111111-111</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Rua:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Rua café com Leite, 777</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Cidade:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Aracaju</p>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <label>Estado:</label>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <p>Sergipe</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="historico-doacoes" role="tabpanel" aria-labelledby="historico-doacoes-tab">
+                                <div class="mt-3">
+                                    <table class="table">
+                                        <thead>
+                                            <tr>
+                                                <th>Data</th>
+                                                <th>Valor</th>
+                                                <th>Campanha</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="3" class="text-muted text-center">Não há registros de doação.</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="tab-pane fade" id="campanhas-favoritas" role="tabpanel" aria-labelledby="campanhas-favoritas-tab">
+                                <div class="row mt-2">
+                                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                                        <div class="card" style="width: 18rem;">
+                                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Título Campanha</h5>
+                                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                                <p class="card-text">
+                                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                                </p>
+                                                <div class="d-flex justify-content-between">
+                                                    <a href="#" class="btn btn-secondary">Doar Agora</a>
+                                                    <a class="star-favorite" href="javascript:void(0)">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="yellow" stroke="black" stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                                        </svg>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+
+    <!-- footer -->
+    <footer>
+        <section class="py-3 py-md-5 py-xl-6 py-xxl-7 border-bottom border-top cor-backgroud-footer mt-5">
+            <div class="container mt-5">
+                <!-- Logo -->
+                <div class="row gy-3 align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <a class="navbar-brand" href="#" target="_self">
+                            <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <!-- Coluna Acessos Rápidos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Acessos Rápidos</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="index.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Início
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="sobre-nos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Sobre Nós
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="como-doar.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Como doar
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="contatos-html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Contatos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de Serviços -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Serviços</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="termos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Termo de Adesão Contratual
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="politica-de-privacidade.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Política de Privacidade
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Trabalhe conosco
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de contatos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Fale conosco</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="contato.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Entre em contato conosco aqui
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-facebook"></i>/facebook
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-instagram"></i>/Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-twitter-x"></i>/X <!-- Ficou estranho -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Fim Footer -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+
+</html>

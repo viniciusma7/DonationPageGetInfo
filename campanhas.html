@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Getinfo - Campanhas</title>
+</head>
+
+<body>
+    <!-- Início Header -->
+    <header class="p-3 mb-1 border-bottom header-shadow-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <!-- Logo -->
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                </a>
+
+                <!-- Lista de itens -->
+                <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
+                    <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
+                    <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+                    <li><a href="como-doar.html" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contatos.html" class="nav-link px-2 link-dark">Contato</a></li>
+                </ul>
+
+                <!-- Icone do usuário com dropdown -->
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/pessoa.jpg" alt="icon-person" width="32" height="32"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="perfil.html#info">Perfil</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#historico-doacoes">Doações Realizadas</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#campanhas-favoritas">Campanhas Favoritas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fim Header -->
+
+    <main>
+        <!-- Inicio Campanhas em Destaque -->
+        <section id="campanhas-em-destaque" class="mt-4">
+            <div class="container">
+                <div class="ms-2">
+                    <h1 class="fs-3">Campanhas em destaque <i class="bi bi-arrow-right"></i></h1>
+                </div>
+                <div class="row justify-content-center">
+
+                    <!-- Início Campanha 1 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 1 -->
+
+                    <!-- Início Campanha 2 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 2 -->
+
+                    <!-- Início Campanha 3 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 3 -->
+
+                    <!-- Início Campanha 4 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 4 -->
+                </div>
+            </div>
+        </section>
+        <!-- Fim Campanhas em Destaque -->
+
+        <!-- Inicio Todas as Campanhas -->
+        <section id="todas-as-campanhas" class="mt-4">
+            <div class="container">
+                <div class="ms-2">
+                    <h1 class="fs-3">Todas as campanhas <i class="bi bi-arrow-right"></i></h1>
+                </div>
+                <div class="row justify-content-center">
+                    <!-- Início Campanha 1 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 1 -->
+
+                    <!-- Início Campanha 2 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 2 -->
+
+                    <!-- Início Campanha 3 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 3 -->
+
+                    <!-- Início Campanha 4 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 4 -->
+                </div>
+                <div class="row justify-content-center">
+                    <!-- Início Campanha 5 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 5 -->
+
+                    <!-- Início Campanha 6 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 6 -->
+
+                    <!-- Início Campanha 7 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 7 -->
+
+                    <!-- Início Campanha 8 -->
+                    <div class="col-12 col-md-3 mb-3 d-flex justify-content-center">
+                        <div class="card" style="width: 18rem;">
+                            <img src="assets/images/grey-solid.jpg" class="card-img-top" alt="Imagem Campanha">
+                            <div class="card-body">
+                                <h5 class="card-title">Título Campanha</h5>
+                                <p class="card-subtitle mb-2 text-muted">Categoria Campanha</p>
+                                <p class="card-text">
+                                    Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit...
+                                </p>
+                                <div class="d-flex justify-content-between">
+                                    <a href="tela-campanha.html" class="btn btn-secondary">Visualizar</a>
+                                    <a class="star-favorite" href="javascript:void(0)">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" stroke="black"
+                                            stroke-width="0.5" class="bi bi-star-fill" viewBox="0 0 16 16">
+                                            <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"/>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Fim Campanha 8 -->
+                </div>
+            </div>
+        </section>
+        <!-- Fim Todas as Campanhas -->
+
+        <!--  -->
+    </main>
+    
+    <!-- Parte do scroll -->
+    <a href="#" class="scroll-top active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </a>
+
+    <!-- footer -->
+    <footer>
+        <section class="py-3 py-md-5 py-xl-6 py-xxl-7 border-bottom border-top cor-backgroud-footer mt-2">
+            <div class="container">
+                <!-- Logo -->
+                <div class="row gy-3 align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <a class="navbar-brand" href="#" target="_self">
+                            <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <!-- Coluna Acessos Rápidos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Acessos Rápidos</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="index.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Início
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="sobre-nos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Sobre Nós
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="como-doar.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Como doar
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="contatos-html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Contatos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de Serviços -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6 mx-auto">Serviços</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="termos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Termo de Adesão Contratual
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="politica-de-privacidade.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Política de Privacidade
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Trabalhe conosco
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de contatos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Fale conosco</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="contato.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Entre em contato conosco aqui
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-facebook"></i>/facebook
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-instagram"></i>/Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-twitter-x"></i>/X <!-- Ficou estranho -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Fim Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="static/index.js"></script>
+</body>
+
+</html>

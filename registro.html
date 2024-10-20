@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- Masks -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Getinfo - Tela de Cadastro</title>
+</head>
+
+<body>
+    <div class="bg-light py-3 py-md-5">
+        <div class="container">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-11 col-lg-8 col-xl-7 col-xxl-6">
+                    <div class="bg-white p-4 p-md-5 rounded shadow-sm">
+                        <div class="row">
+                            <div class="col-12 text-center mb-5">
+                                <a href="index.html">
+                                    <img src="assets/icons/logo-getinfo.png" alt="Logo" width="175" height="57">
+                                </a>
+                            </div>
+                        </div>
+    
+                        <form id="formCadastro" action="campanhas.html" method="post">
+
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" id="tipoConta" onchange="IOtipoConta()">
+                                <label class="form-check-label" for="tipoConta">Sou Pessoa Jurídica</label>
+                            </div>
+    
+                            <div class="row gy-3 gy-md-4 overflow-hidden">
+                                <!-- Campos Pessoa Física -->
+                                <div class="col-12" id="divNomePessoa">
+                                    <label for="nomePessoa" class="form-label">Nome: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="nomePessoa" id="nomePessoa" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-12" id="divCPFPessoa">
+                                    <label for="cpf" class="form-label">CPF: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="cpf" id="cpf" required>
+                                    </div>
+                                </div>
+    
+                                <!-- Campos para Pessoa Jurídica -->
+                                <div class="col-12 d-none" id="divResponsavelEmpresa">
+                                    <label for="responsavelEmpresa" class="form-label">Responsável pela Empresa: <span
+                                            class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="responsavelEmpresa" id="responsavelEmpresa">
+                                    </div>
+                                </div>
+    
+                                <div class="col-12 d-none" id="divNomeEmpresa">
+                                    <label for="nomeEmpresa" class="form-label">Nome da Empresa: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="nomeEmpresa" id="nomeEmpresa">
+                                    </div>
+                                </div>
+    
+                                <div class="col-12 d-none" id="divCNPJEmpresa">
+                                    <label for="cnpj" class="form-label">CNPJ: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="cnpj" id="cnpj">
+                                    </div>
+                                </div>
+    
+                                <!-- Campos persistentes -->
+                                <div class="col-12">
+                                    <label for="email" class="form-label">Email: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="email" class="form-control" name="email" id="email" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-12">
+                                    <label for="senha" class="form-label">Senha: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="password" class="form-control" name="senha" id="senha" required>
+                                        <button class="btn btn-outline-secondary" onclick="togglePasswordVisibility('senha', this)" type="button" id="revelSenha"><i class="bi bi-eye-fill"></i></button>
+                                    </div>
+                                </div>
+    
+                                <div class="col-6">
+                                    <label for="telefone" class="form-label">Telefone: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="tel" class="form-control" name="telefone" id="telefone" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-6">
+                                    <label for="cepEndereco" class="form-label">CEP: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="cepEndereco" id="cepEndereco" required>
+                                    </div>
+                                    <div id="cepErro" class="form-text text-danger"></div>
+                                </div>
+    
+                                <div class="col-12">
+                                    <label for="ruaEndereco" class="form-label">Rua: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="ruaEndereco" id="ruaEndereco" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-4">
+                                    <label for="numeroEndereco" class="form-label">Número: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="numeroEndereco" id="numeroEndereco" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-8">
+                                    <label for="bairroEndereco" class="form-label">Bairro: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="bairroEndereco" id="bairroEndereco" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-8">
+                                    <label for="cidadeEndereco" class="form-label">Cidade: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="cidadeEndereco" id="cidadeEndereco" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="col-4">
+                                    <label for="ufEndereco" class="form-label">Estado: <span class="text-danger">*</span></label>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" name="ufEndereco" id="ufEndereco" required>
+                                    </div>
+                                </div>
+    
+                                <div class="col-12">
+                                    <div class="d-grid">
+                                        <button class="btn btn-primary btn-lg" type="submit">Cadastrar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+    
+                        <div class="row">
+                            <div class="col-12">
+                                <hr class="mt-5 mb-4 border-secondary-subtle">
+                                <p class="m-0 text-secondary text-center">Já tem uma conta? <a href="login.html" class="link-primary text-decoration-none">Entrar</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="static/index.js"></script>
+    <script src="static/registro.js"></script>
+</body>
+
+</html>

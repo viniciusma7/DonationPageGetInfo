@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Getinfo - Tela Inicial</title>
+</head>
+
+<body>
+    <!-- Início Header -->
+    <header class="p-3 mb-1 border-bottom header-shadow-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <!-- Logo -->
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                </a>
+
+                <!-- Lista de itens -->
+                <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
+                    <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
+                    <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+                    <li><a href="como-doar.html" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contatos.html" class="nav-link px-2 link-dark">Contato</a></li>
+                </ul>
+
+                <!-- Icone do usuário com dropdown -->
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/pessoa.jpg" alt="icon-person" width="32" height="32"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="login.html">Perfil</a></li>
+                        <li><a class="dropdown-item" href="login.html">Doações Realizadas</a></li>
+                        <li><a class="dropdown-item" href="login.html">Campanhas Favoritas</a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <div class="d-flex justify-content-between">
+                            <a href="login.html" class="btn btn-primary btn-lg me-2" role="button">Entrar</a>
+                            <a href="registro.html" class="btn btn-primary btn-lg" role="button">Cadastrar</a>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fim Header -->
+
+    <!-- Conteúdo principal -->
+    <main>
+        <div class="container">
+            <section id="carousel">
+                <div id="carouselCampanhas" class="carousel slide" data-bs-ride="false">
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carouselCampanhas" data-bs-slide-to="0" class="active"
+                            aria-current="true" aria-label="Slide 1"></button>
+                        <button type="button" data-bs-target="#carouselCampanhas" data-bs-slide-to="1"
+                            aria-label="Slide 2"></button>
+                        <button type="button" data-bs-target="#carouselCampanhas" data-bs-slide-to="2"
+                            aria-label="Slide 3"></button>
+                    </div>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="assets/images/grey-solid.jpg" alt="campanha1" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Campanha 1</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="campanhas.html" class="text-primary text-decoration-none">Ver mais</a></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/grey-solid.jpg" alt="campanha2" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Campanha 2</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="campanhas.html" class="text-primary text-decoration-none">Ver mais</a></p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="assets/images/grey-solid.jpg" alt="campanha3" />
+                            <div class="carousel-caption d-none d-md-block">
+                                <h5>Campanha 3</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <a href="campanhas.html" class="text-primary text-decoration-none">Ver mais</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselCampanhas"
+                        data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselCampanhas"
+                        data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </section>
+
+            <hr class="mt-5">
+
+            <section id="categorias">
+                <div class="mt-5">
+                    <div class="text-center">
+                        <h1 class="fw-bold">Tipos de Doações</h1>
+                    </div>
+                    <div class="row text-center mt-3">
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Roupas e Calçados" width="268">
+                            </div>
+                            <p class="mt-2">Roupas e Calçados</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Alimentos Perecíveis" width="268">
+                            </div>
+                            <p class="mt-2">Alimentos Perecíveis</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Higiene Pessoal" width="268">
+                            </div>
+                            <p class="mt-2">Higiene Pessoal</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Móveis" width="268">
+                            </div>
+                            <p class="mt-2">Móveis</p>
+                        </div>
+                    </div>
+                    <div class="row text-center mt-3">
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Roupas e Calçados" width="268">
+                            </div>
+                            <p class="mt-2">Brinquedos</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Alimentos Perecíveis" width="268">
+                            </div>
+                            <p class="mt-2">Dinheiro</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Higiene Pessoal" width="268">
+                            </div>
+                            <p class="mt-2">Eletrônicos</p>
+                        </div>
+                        <div class="col-12 col-md-3 d-flex flex-column align-items-center">
+                            <div class="category-icon">
+                                <img src="assets/images/grey-solid.jpg" alt="Móveis" width="268">
+                            </div>
+                            <p class="mt-2">Eletrodomésticos</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="mt-5">
+
+            <section id="quem-somos" class="section about">
+                <div class="row featurette mt-5">
+                    <div class="col-md-6">
+                        <h2>Quem Somos?</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt quidem
+                            numquam necessitatibus nemo repellendus molestiae tempora quae, quam assumenda delectus
+                            explicabo id esse voluptatibus harum excepturi nostrum quia sapiente?</p>
+                        <p class="lead">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Fugit pariatur commodi
+                            nulla sed beatae atque quo quas eius placeat rem esse dolorum animi delectus minus, quisquam
+                            aliquid corporis quibusdam nostrum.</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                            src="assets/images/grey-solid.jpg" data-holder-rendered="true"
+                            style="width: 620px; height: 500px;">
+                    </div>
+                </div>
+            </section>
+
+            <hr class="mt-5">
+
+            <section id="quem-somos" class="section about">
+                <div class="row featurette mt-5">
+                    <div class="col-md-6">
+                        <img class="featurette-image img-fluid mx-auto" data-src="holder.js/500x500/auto" alt="500x500"
+                            src="assets/images/grey-solid.jpg" data-holder-rendered="true"
+                            style="width: 620px; height: 500px;">
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Nossa História</h2>
+                        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque feugiat nulla
+                            vel posuere tincidunt. Ut sollicitudin faucibus odio ac gravida. Vestibulum venenatis
+                            efficitur egestas. In vel porttitor sapien. Nam bibendum ligula vel ipsum eleifend
+                            facilisis. Morbi cursus neque velit, non maximus nunc volutpat ac. Vivamus pharetra mollis
+                            velit, at ullamcorper leo malesuada sed. Integer lobortis fringilla iaculis. Vestibulum ante
+                            ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Mauris at semper
+                            felis.</p>
+                    </div>
+                </div>
+            </section>
+
+            <hr class="mt-5">
+
+            <section id="our-partners">
+                <h3 class="text-center mb-4 mt-5">Parceiros Verificados</h3>
+                <div class="logos overflow-hidden py-5 px-0 position-relative" style="white-space: nowrap;">
+                    <div class="logos-slide d-inline-block">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                        <img src="assets/images/grey-solid.jpg" alt="" class="rounded-circle">
+                    </div>
+                </div>
+            </section>
+
+            <hr class="mt-5">
+
+            <section id="want-to-donate">
+                <div class="mt-5 text-center">
+                    <a href="registro.html">
+                        <button type="button" class="btn btn-outline-secondary fs-5">Quero Doar</button>
+                    </a>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <a href="#" class="scroll-top active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </a>
+
+    <!-- footer -->
+    <footer>
+        <section class="py-3 py-md-5 py-xl-6 py-xxl-7 border-bottom border-top cor-backgroud-footer mt-5">
+            <div class="container">
+                <!-- Logo -->
+                <div class="row gy-3 align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <a class="navbar-brand" href="#" target="_self">
+                            <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <!-- Coluna Acessos Rápidos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Acessos Rápidos</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="index.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Início
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="sobre-nos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Sobre Nós
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="como-doar.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Como doar
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="contatos-html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Contatos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de Serviços -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Serviços</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="termos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Termo de Adesão Contratual
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="politica-de-privacidade.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Política de Privacidade
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Trabalhe conosco
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de contatos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Fale conosco</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="contato.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Entre em contato conosco aqui
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-facebook"></i>/facebook
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-instagram"></i>/Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-twitter-x"></i>/X <!-- Ficou estranho -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Fim Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="static/index.js"></script>
+</body>
+
+</html>

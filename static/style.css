@@ -1,0 +1,335 @@
+/* Fonte */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Variáveis */
+:root {
+    --blue-getinfo: #a3f2ef;
+    --gray-getinfo: #595454;
+    --white: #fff;
+    --white-bg: #fafafa;
+    --black: #000000;
+}
+
+/* Geral */
+body {
+    font-family: "Inter", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-bg);
+}
+
+/* Header */
+.header-shadow-bottom {
+    box-shadow: 1px 5px 9px -1px rgba(128, 128, 128, 1);
+    -webkit-box-shadow: 1px 5px 9px -1px rgba(128, 128, 128, 1);
+    -moz-box-shadow: 1px 5px 9px -1px rgba(128, 128, 128, 1);
+}
+
+header .btn-lg {
+    font-size: 12pt !important;
+    height: 30px !important;
+    width: 50%;
+    padding: 0;
+    display: inline-block;
+    margin: 0 5px 0 5px;
+}
+
+header ul li .nav-link {
+    font-weight: bold;
+}
+
+header ul li .nav-link:hover {
+    color: var(--blue-getinfo) !important;
+    transition: color 0.3s ease;
+}
+
+.dropdown-toggle::after {
+    display: inline-block;
+    margin-left: 0.255em;
+    vertical-align: 0.255em;
+    content: "";
+    transition: transform 0.3s ease;
+}
+
+.rotate::after {
+    transform: rotate(180deg);
+}
+
+/* Main */
+/* Perfil -> usado em perfil.html */
+#perfil .image-profile img {
+    max-width: 220px;
+    height: auto;
+}
+
+#perfil .header-usuario h4 {
+    color: #333;
+}
+
+#perfil .dados-perfil label {
+    font-weight: 600;
+}
+
+#perfil .dados-perfil p {
+    font-weight: 600;
+    color: #0056b3;
+}
+
+#perfil .nav-tabs .nav-link.active {
+    border-bottom: 2px solid #0056b3;
+}
+
+#historico-doacoes.active {
+    margin-bottom: 240px; 
+}
+
+/* Custom-instagram -> Usado em login.html */
+.custom-instagram {
+    color: #D62976;
+    border: 1px solid #D62976;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+.custom-instagram:hover {
+    background-color: #D62976;
+    color: white;
+}
+
+/* Usado em campanhas.html */
+#campanha .container {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Usado como referência: https://bbbootstrap.com/snippets/carousel-slider-thumbnails-25493000 */
+
+#campanha .carousel-inner img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    height: 100%;
+    pointer-events: none; 
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    width: 30px;
+    height: 30px;
+    background-size: 100%, 100%;
+    pointer-events: all;
+}
+
+.carousel-control-prev {
+    left: 0;
+}
+
+.carousel-control-next {
+    right: 0;
+}
+
+#campanha #custCarousel .carousel-indicators {
+    position: static;
+    margin-top: 1px;
+    display: flex;
+    justify-content: center;
+}
+
+#campanha #custCarousel .carousel-indicators>li {
+    width: 80px;
+    margin: 0 5px;
+}
+
+#campanha #custCarousel .carousel-indicators li img {
+    display: block;
+    opacity: 0.5;
+    width: 100%;
+    height: auto;
+}
+
+#campanha #custCarousel .carousel-indicators li.active img {
+    opacity: 1;
+}
+
+#campanha #custCarousel .carousel-indicators li:hover img {
+    opacity: 0.75;
+}
+
+/* Imagem preview, após o "upload" */
+/* Usado em cadastro-campanha.html */
+
+#imagens-preview {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.preview-container {
+    position: relative;
+    display: inline-block;
+}
+
+.preview-container img {
+    max-width: 100px;
+    max-height: 100px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.preview-container button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: -10px;
+    right: -7px;
+    background: red;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 0;
+    line-height: 1;
+}
+
+
+/* Senha */
+
+div #myTabContent {
+    margin-top: 20px;
+}
+
+/* Estrela */
+.star-favorite svg {
+    transition: 0.5s ease-in-out;
+}
+
+.star-favorite svg:hover {
+    fill: rgba(177, 177, 0, 0.705);
+    transition: 0.5s ease-in-out;
+}
+
+.star-favorite.active svg {
+    fill: yellow;
+}
+
+/* Parceiros */
+/* https://codepen.io/gvzq/pen/OJVvzJz */
+.logos-wrapper {
+    overflow: hidden;
+    position: relative;
+}
+
+.logos {
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.logos-mask {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 130px;
+    z-index: 2;
+    background: linear-gradient(to left, rgba(255, 255, 255, 0));
+}
+
+.logos-mask.right {
+    right: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0));
+}
+
+.logos-slide {
+    display: flex;
+    animation: slide 40s linear infinite;
+}
+
+.logos-slide img {
+    height: 130px;
+    width: 130px;
+    margin: 0 50px;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Scroll-top */
+.scroll-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: 15px;
+    bottom: -15px;
+    visibility: hidden;
+    opacity: 0;
+    width: 44px;
+    height: 44px;
+    background: #808080;
+    border-radius: 100%;
+    transition: .3s;
+    z-index: 11
+}
+
+.scroll-top:hover {
+    background: #666666;
+    box-shadow: 0 6px 15px 0 rgb(88, 88, 88)
+}
+
+.scroll-top .icon {
+    color: #fff;
+    width: 20px;
+    height: 20px
+}
+
+.scroll-top.active {
+    visibility: visible;
+    opacity: 1;
+    transition: .3s;
+    bottom: 15px
+}
+
+/* Footer */
+.cor-backgroud-footer {
+    background-color: var(--white);
+}
+
+.border-top {
+    box-shadow: 1px -4px 9px -1px rgba(128, 128, 128, 1);
+    -webkit-box-shadow: 1px -4px 9px -1px rgba(128, 128, 128, 1);
+    -moz-box-shadow: 1px -4px 9px -1px rgba(128, 128, 128, 1);
+}
+
+.cor-hover-link-footer:hover {
+    text-decoration: none;
+    color: var(--blue-getinfo) !important;
+    transition: color 0.3s ease;
+}
+
+footer a {
+    text-decoration: none !important;
+}
