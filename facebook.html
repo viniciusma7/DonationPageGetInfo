@@ -1,0 +1,194 @@
+<!-- Feito por Heloisa -->
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fazer login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            /* Alinhando o conteúdo para a esquerda */
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+            padding-left: 20px;
+            /* Adiciona um espaço à esquerda */
+        }
+
+        .login-container {
+            background-color: #fff;
+            padding: 40px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            margin-bottom: 20px;
+        }
+
+        .login-container h1 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            text-align: left;
+            /* Alinhando o título à esquerda */
+            justify-content: left;
+            /* Centraliza horizontalmente */
+        }
+
+        .login-login h1 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            text-align: left;
+            /* Alinhando o título à esquerda */
+        }
+
+        .login-container input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .login-container .forgot-password {
+            text-align: center;
+            /* Alinhando o link "Esqueceu seu e-mail?" à esquerda */
+            margin-bottom: 20px;
+        }
+
+        .login-container a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .login-container .btn {
+            background-color: #1a73e8;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            width: 100%;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .login-container .btn:hover {
+            background-color: #0c5bbf;
+        }
+
+        .login-container .small-text {
+            font-size: 12px;
+            color: #666;
+            text-align: left;
+            /* Mantendo o texto de políticas no centro */
+        }
+
+        .login-container .create-account {
+            text-align: center;
+            /* Mantendo o link de criar conta centralizado */
+        }
+
+        .cor-palavra {
+            color: rgb(6, 208, 202);
+        }
+
+        .imagem-texto {
+            display: flex;
+            align-items: center;
+        }
+
+        .imagem-texto img {
+            margin-right: 5px;
+            /* Espaço entre a imagem e o texto */
+            margin-top: -13px;
+        }
+
+        .centralizado {
+            text-align: center;
+        }
+
+        .Esqueceu {
+            text-align: center;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 99.3%;
+            background-color: #104ce4;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            z-index: 1000;
+        }
+
+        .logo {
+            color: #fff;
+            margin-left: 40px;
+        }
+
+        .cadastro {
+            background-color: green;
+            /* Cor de fundo do botão */
+            color: white;
+            /* Cor do texto */
+            border: none;
+            /* Sem borda */
+            padding: 10px 20px;
+            /* Espaçamento interno */
+            font-size: 16px;
+            /* Tamanho da fonte */
+            cursor: pointer;
+            /* Muda o cursor ao passar sobre o botão */
+            border-radius: 5px;
+            /* Bordas arredondadas */
+            margin-right: 40px;
+        }
+    </style>
+</head>
+</head>
+
+<body>
+    <header>
+        <h2>
+            <div class="logo">Facebook</div>
+            </h1>
+            <button class="cadastro">Cadastre-se</button>
+    </header>
+    <main>
+        <div class="login-container">
+            <p align="center">
+                <Entrar com alt="" width="100" height="30">
+                    </center>
+            </p>
+            <div class="centralizado">
+                <h3>Entrar no Facebook</h3>
+            </div>
+            <input type="text" placeholder="E-mail ou telefone">
+            <input type="password" placeholder="Senha">
+
+            <button class="btn" onclick="login(); return false;">Entrar</button>
+
+            <div class="Esqueceu">
+                <a href="#">Esqueceu a conta?</a>
+
+                <p class="small-text">
+                    Consulte a <a href="#">Política de Privacidade</a> e os <a href="#">Termos de Serviço</a> do app get
+                    info antes de usá-lo.
+                </p>
+            </div>
+    </main>
+
+    <script src="static/index.js"></script>
+</body>
+
+</html>

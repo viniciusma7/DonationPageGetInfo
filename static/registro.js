@@ -33,6 +33,7 @@ $(document).ready(function () {
     $("#cpf").inputmask("999.999.999-99");
     $("#telefone").inputmask("(99) 99999-9999");
 });
+
 // https://www.youtube.com/watch?v=nJtwKUQkAGo - Preenchimento automático do endereço a partir do CEP usando HTML + JavaScript + BrasilAPI
 function buscaCep(campo) {
     let cep = campo.value.replace(/\D/g, '');

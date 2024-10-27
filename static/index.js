@@ -63,7 +63,7 @@ function togglePasswordVisibility(passwordFieldId, button) {
     }
 }
 
-// Sem data final (cadastro-campanha.html)
+// Sem data final (cadastro_campanha.html)
 
 function toggleDataFim() {
     const dataFimInput = document.getElementById('dataFim');
@@ -72,7 +72,7 @@ function toggleDataFim() {
     dataFimInput.disabled = checkBox.checked; 
 }
 
-// MascaraMoeda (cadastro-campanha.html)
+// MascaraMoeda (cadastro_campanha.html)
 
 //-----------------------------------------------------  
  //Funcao: MascaraMoeda  
@@ -131,7 +131,7 @@ function toggleDataFim() {
 }  
 
 
-// Preview (cadastro-campanha.html)
+// Preview (cadastro_campanha.html)
 // Referências: 
 // https://stackoverflow.com/questions/11743392/how-to-check-if-an-array-is-empty-or-exists
 // https://stackoverflow.com/questions/4459379/preview-an-image-before-it-is-uploaded
@@ -170,3 +170,52 @@ function previewImagens(event) {
     });
 }
 
+// Função para abir janela como se fosse o login real...
+function abrirPopup(arquivo) {
+    const url = arquivo;
+
+    const largura = 700;
+    const altura = 800;
+
+    const esquerda = (window.screen.width - largura) / 2;
+    const topo = (window.screen.height - altura) / 2;
+
+    window.open(
+        url,
+        "popupWindow",
+        `width=${largura},height=${altura},top=${topo},left=${esquerda}`
+    );
+}
+
+// Loga no google, insta e etc...
+function login() {
+    window.opener.location.href = "tela_campanha_autenticado.html";
+    window.close();
+}
+
+// As coisas surgindo conforme vai rolando o scroll, usado em index.html
+/*
+ * Usado como referência: https://www.youtube.com/watch?v=pKTOT63X9XQ
+ * Editado para persistência após scroll pelo Squad 13 - RiseUP (2024.2)
+ * Melhorado a sincronização por scroll (removido o debounce)
+ */
+
+const target = document.querySelectorAll('[data-anime]');
+const animationClass = 'animate';
+
+function animeScroll() {
+    const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+    target.forEach(function (element) {
+        if ((windowTop) > element.offsetTop && !element.classList.contains(animationClass)) {
+            element.classList.add(animationClass); // Adiciona a classe de animação
+        }
+    });
+}
+
+animeScroll();
+
+if (target.length) {
+    window.addEventListener('scroll', function() {
+        animeScroll();
+    });
+}

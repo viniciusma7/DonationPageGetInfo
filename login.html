@@ -32,7 +32,7 @@
                             </div>
                         </div>
 
-                        <form action="campanhas.html" method="post">
+                        <form action="" method="post" onsubmit="login(); return false;">
                             <div class="row gy-3 gy-md-4 overflow-hidden">
                                 <div class="col-12">
                                     <label for="emailLogin" class="form-label">E-mail: <span
@@ -55,7 +55,7 @@
                                 </div>
                                 <div class="col-12">
                                     <div class="d-grid">
-                                        <button class="btn btn-primary btn-lg" type="submit">Entrar</button>
+                                        <a href="tela_campanha_autenticado.html" class="btn btn-primary btn-lg" type="submit">Entrar</a>
                                     </div>
                                 </div>
                             </div>
@@ -65,12 +65,12 @@
                             <div class="col-12 text-center">
                                 <!-- <p class="mt-5 mb-5 text-secondary">Ou então...</p> Remoção solicitada pelo mentor -->
                                 <div class="d-flex flex-column gap-2 align-items-center mt-5">
-                                    <a href="#"
+                                    <a onclick="abrirPopup('google.html')"
                                         class="btn btn-sm btn-outline-danger d-flex align-items-center justify-content-center p-2 w-75 fs-6"
                                         aria-label="Continuar com o Google">
                                         <i class="bi bi-google me-2"></i> Continuar com o Google
                                     </a>
-                                    <a href="#"
+                                    <a onclick="abrirPopup('facebook.html')"
                                         class="btn btn-sm btn-outline-primary d-flex align-items-center justify-content-center p-2 w-75 fs-6"
                                         aria-label="Continuar com o Facebook">
                                         <i class="bi bi-facebook me-2"></i> Continuar com o Facebook
@@ -80,7 +80,7 @@
                                         aria-label="Continuar com o Twitter">
                                         <i class="bi bi-twitter-x me-2"></i> Continuar com o X
                                     </a> Alteração solicitada pelo mentor -->
-                                    <a href="#" class="btn btn-sm custom-instagram d-flex align-items-center justify-content-center p-2 w-75 fs-6"
+                                    <a onclick="abrirPopup('instagram.html')" class="btn btn-sm custom-instagram d-flex align-items-center justify-content-center p-2 w-75 fs-6"
                                         aria-label="Continuar com o Instagram">
                                         <i class="bi bi-instagram me-2"></i> Continuar com o Instagram
                                     </a>

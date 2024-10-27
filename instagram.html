@@ -1,0 +1,143 @@
+<!-- Feito por Heloisa -->
+
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #fafafa;
+            display: flex;
+            justify-content: center;
+            /* Centraliza horizontalmente */
+            align-items: center;
+            /* Centraliza verticalmente */
+            height: 100vh;
+            margin: 0;
+        }
+
+        .login-container {
+            background: #fff;
+            border: 1px solid #dbdbdb;
+            padding: 20px;
+            width: 350px;
+            text-align: center;
+            /* Centraliza o conteúdo textualmente */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+
+        .login-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* Centraliza todos os itens */
+            width: 100%;
+        }
+
+        .login-form input {
+            width: 70%;
+            /* Ajusta a largura para 90% do contêiner */
+            margin-bottom: 10px;
+            padding: 10px;
+            border: 1px solid #dbdbdb;
+            border-radius: 3px;
+            background: #fafafa;
+        }
+
+        .login-form button {
+            /* width: 70%; */
+            /* Ajusta a largura para 90% do contêiner */
+            background-color: #3897f0;
+            border: none;
+            color: #fff;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .divider {
+            display: flex;
+            align-items: center;
+            width: 90%;
+            /* Alinha ao tamanho dos outros elementos */
+            margin: 10px 0;
+        }
+
+        .divider span {
+            background: #fff;
+            padding: 0 10px;
+            color: #999;
+            font-size: 14px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+            flex: 1;
+            height: 1px;
+            background: #dbdbdb;
+        }
+
+        .fb-login {
+            width: 90%;
+            /* Ajusta a largura para 90% do contêiner */
+            background-color: #4267B2;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        .forgot-password {
+            color: #00376b;
+            text-decoration: none;
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+        .forgot-password:hover {
+            text-decoration: underline;
+        }
+
+        .logo-image {
+            width: 130px;
+            /* Ajuste o tamanho conforme necessário */
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <img src="assets/icons/instagram.png" width="140px">
+        <form class="login-form" onsubmit="login(); return false;">
+            <input type="text" placeholder="Telefone, nome de usuário ou email"> <!-- required --> 
+            <input type="password" placeholder="Senha"> <!-- required --> 
+            <button type="submit">Entrar</button>
+            <!-- <button type="submit">Entrar</button> -->
+            <div class="divider">
+                <span>OU</span>
+            </div>
+            <a href="#" class="forgot-password">Esqueceu a senha?</a>
+        </form>
+    </div>
+
+
+    <script src="static/index.js"></script>
+</body>
+
+</html>

@@ -74,10 +74,13 @@
                         <div class="input-group">
                             <select id="categoriaCampanha" name="categoriaCampanha" class="form-control">
                                 <option value="" disabled selected>Selecione uma categoria</option>
+                                <option value="roupasECalcados">Roupas e Calçados</option>
+                                <option value="alimentosPereciveis">Alimentos Perecíveis</option>
+                                <option value="higienePessoal">HigienePessoal</option>
+                                <option value="moveis">Móveis</option>
+                                <option value="brinquedos">Brinquedos</option>
                                 <option value="saude">Saúde</option>
-                                <option value="educacao">Educação</option>
-                                <option value="meio-ambiente">Meio Ambiente</option>
-                                <option value="animais">Animais</option>
+                                <option value="eletronicos">Eletrônicos</option>
                                 <option value="outro">Outro</option>
                             </select>
                         </div>
@@ -170,20 +173,24 @@
                         </div>
                         <div id="meta-doacoes" class="mt-3">
                             <h5>Meta da Campanha</h5>
-                            <label for="tituloCampanha" class="form-label mt-2">Meta (R$): <span
+                            <label for="metaCampanha" class="form-label mt-2">Meta (R$): <span
                                     class="text-danger">*</span></label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="tituloCampanha" id="tituloCampanha"
+                                <input type="text" class="form-control" name="metaCampanha" id="metaCampanha"
                                     onkeypress="return(MascaraMoeda(this,'.',',',event))" required>
                             </div>
-                            <div id="imagens" class="mt-3">
-                                <h5>Fotos</h5>
-                                <p class="fs-6 fw-light">Adicione até 6 imagens para representar sua campanha. O visual ajuda a engajar os doadores.</p>
-                                <label for="imagem-campanha" class="btn btn-primary">
-                                    <i class="bi bi-image"></i> &nbsp;Adicionar Imagem
-                                    <input type="file" id="imagem-campanha" name="imagem-campanha[]" accept="image/*" multiple style="display: none;" onchange="previewImagens(event)">
-                                </label>
-                                <div id="imagens-preview" class="mt-3 d-flex flex-wrap"></div>
+                        </div>
+                        <div id="imagens" class="mt-3">
+                            <h5>Fotos</h5>
+                            <p class="fs-6 fw-light">Adicione até 6 imagens para representar sua campanha. O visual ajuda a engajar os doadores.
+                            </p>
+                            <label for="imagem-campanha" class="btn btn-primary">
+                                <i class="bi bi-image"></i> &nbsp;Adicionar Imagem
+                                <input type="file" id="imagem-campanha" name="imagem-campanha[]" accept="image/*" multiple
+                                    style="display: none;" onchange="previewImagens(event)">
+                            </label>
+                            <div id="imagens-preview" class="mt-3 d-flex flex-wrap">
+                                <!-- Aqui vai as imagens -->
                             </div>
                         </div>
                     </div>

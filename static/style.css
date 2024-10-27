@@ -18,6 +18,32 @@ body {
     background-color: var(--white-bg);
 }
 
+.hidden {
+    display: none;
+}
+.active {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    flex: 1;
+}
+
+footer {
+    width: 100%;
+}
+
 /* Header */
 .header-shadow-bottom {
     box-shadow: 1px 5px 9px -1px rgba(128, 128, 128, 1);
@@ -56,6 +82,38 @@ header ul li .nav-link:hover {
 }
 
 /* Main */
+/* Efeito das coisas surgindo -> Usado em index.html */
+[data-anime] {
+    opacity: 0;
+    transition: 1s;
+}
+
+[data-anime="left"] {
+    transform: translate3d(-50px, 0, 0);
+}
+
+[data-anime="right"] {
+    transform: translate3d(50px, 0, 0);
+}
+
+[data-anime="top"] {
+    transform: translate3d(0, -50px, 0);
+}
+
+[data-anime].animate {
+    opacity: 1;
+    transform: translate3d(0px, 0px, 0px);
+}
+
+.category-icon {
+    transition: 0.2s ease-in-out;
+}
+
+.category-icon:hover {
+    transform: scale(1.07);
+    transition: 0.2s ease-in-out;
+}
+
 /* Perfil -> usado em perfil.html */
 #perfil .image-profile img {
     max-width: 220px;
@@ -80,7 +138,7 @@ header ul li .nav-link:hover {
 }
 
 #historico-doacoes.active {
-    margin-bottom: 240px; 
+    margin-bottom: 240px;
 }
 
 /* Custom-instagram -> Usado em login.html */
@@ -122,7 +180,7 @@ header ul li .nav-link:hover {
     justify-content: center;
     z-index: 1;
     height: 100%;
-    pointer-events: none; 
+    pointer-events: none;
 }
 
 .carousel-control-prev-icon,
@@ -169,7 +227,7 @@ header ul li .nav-link:hover {
 }
 
 /* Imagem preview, após o "upload" */
-/* Usado em cadastro-campanha.html */
+/* Usado em cadastro_campanha.html */
 
 #imagens-preview {
     display: flex;
