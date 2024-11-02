@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Masks -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/inputmask/4.0.9/jquery.inputmask.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/icons/favicon.png" type="image/x-icon">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="static/style.css">
+
+    <title>Getinfo - Contato</title>
+</head>
+
+<body>
+    <!-- Início Header -->
+    <header class="p-3 mb-1 border-bottom header-shadow-bottom">
+        <div class="container">
+            <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                <!-- Logo -->
+                <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                    <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                </a>
+
+                <!-- Lista de itens -->
+                <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
+                    <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
+                    <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
+                    <li><a href="contato_e_duvidas.html#duvidas" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contato_e_duvidas.html#contato" class="nav-link px-2 link-dark">Contato</a></li>
+                </ul>
+
+                <!-- Icone do usuário com dropdown -->
+                <div class="dropdown text-end">
+                    <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <img src="assets/images/pessoa.jpg" alt="icon-person" width="32" height="32"
+                            class="rounded-circle">
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="perfil.html#info">Perfil</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#historico-doacoes">Doações Realizadas</a></li>
+                        <li><a class="dropdown-item" href="perfil.html#campanhas-favoritas">Campanhas Favoritas</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Fim Header -->
+
+    <main class="container my-5">
+        <section id="contato">
+            <div class="row">
+                <!-- Formulário de Contato -->
+                <div class="col-12 col-md-6 col-lg-5 p-4 bg-white shadow rounded" data-anime="left">
+                    <h3 class="text-center mb-4">Envie-nos uma mensagem</h3>
+                    <form onsubmit=""> <!-- Depois colocar um modal de confirmação de envio de mensagem. -->
+                        <div class="mb-3">
+                            <label for="nomeContato" class="form-label">Nome</label>
+                            <input type="text" class="form-control" id="nomeContato" placeholder="Seu nome">
+                        </div>
+                        <div class="mb-3">
+                            <label for="emailContato" class="form-label">E-mail</label>
+                            <input type="email" class="form-control" id="emailContato" placeholder="Seu e-mail">
+                        </div>
+                        <div class="mb-3">
+                            <label for="telefoneContato" class="form-label">Telefone</label>
+                            <input type="tel" class="form-control" id="telefoneContato" placeholder="(99) 99999-9999">
+                        </div>
+                        <div class="mb-3">
+                            <label for="assuntoContato" class="form-label">Assunto</label>
+                            <input type="text" class="form-control" id="assuntoContato" placeholder="Assunto da mensagem">
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensagemContato" class="form-label">Mensagem</label>
+                            <textarea class="form-control" id="mensagemContato" rows="4"
+                                placeholder="Digite sua mensagem"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">ENVIAR</button>
+                    </form>
+                </div>
+                <!-- Informações de Contato e Mapa -->
+                <div class="col-12 col-md-6 col-lg-5 offset-lg-1 mt-5 mt-md-0" data-anime="right">
+                    <h1>Como chegar até nós:</h1>
+                    <!-- Endereço -->
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="fw-bold">Endereços:</p>
+                        </div>
+                        <div class="col">
+                            <p>
+                                GetInfo<br>
+                                Av. Murilo Dantas, 300 - Farolândia<br>
+                                CEP 49032-490 | Aracaju - SE
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Telefone -->
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="fw-bold">Telefone:</p>
+                        </div>
+                        <div class="col">
+                            <p>(79) 99999-9999</p>
+                        </div>
+                    </div>
+                    <!-- E-mail -->
+                    <div class="row">
+                        <div class="col-3">
+                            <p class="fw-bold">E-mail:</p>
+                        </div>
+                        <div class="col">
+                            <a href="mailto:lorem.ipsum@souunit.com.br">lorem.ipsum@souunit.com.br</a>
+                        </div>
+                    </div>
+                    <hr>
+                    <!-- Localização da UNIT -->
+                    <div class="row" style="margin-top: 30px;">
+                        <div class="col" style="overflow: hidden; width: 100%;">
+                            <iframe class="w-100" title="Unit" height="350" frameborder="0" loading="lazy"
+                                referrerpolicy="no-referrer-when-downgrade"
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1958.4639134226036!2d-37.058706823662554!3d-10.968820333325562!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x71ab143dce5a8f5%3A0xdce07c193ed061d0!2sUnit%20-%20Universidade%20Tiradentes!5e0!3m2!1spt-BR!2sbr!4v1730515647253!5m2!1spt-BR!2sbr">
+                            </iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="duvidas">
+            <div class="col-12 mt-5">
+                <h3 class="text-center mb-4">Dúvidas Frequentes</h3>
+                <div class="accordion accordion-flush mt-5" id="accordionFlushExample">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingOne">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="true" aria-controls="flush-collapseOne">
+                                Como faço para doar?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseOne" class="accordion-collapse collapse show" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Para doar, você pode acessar a página de doação, selecionar a campanha que deseja apoiar e seguir as instruções para fazer sua contribuição.
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Commodi, cum.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingTwo">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                                Para quais campanhas posso doar?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae
+                                facilis dolorum nisi, cumque totam esse placeat mollitia velit corporis,
+                                ipsum veritatis eos voluptate cum aspernatur quibusdam eius optio tenetur?
+                                Quidem?
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingThree">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseThree" aria-expanded="false"
+                                aria-controls="flush-collapseThree">
+                                As doações são seguras?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseThree" class="accordion-collapse collapse"
+                            aria-labelledby="flush-headingThree" data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam
+                                hic eius voluptatem omnis placeat maxime, minima distinctio nemo id
+                                quam pariatur esse rerum eos aliquam.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="flush-headingFour">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#flush-collapseFour" aria-expanded="false"
+                                aria-controls="flush-collapseFour">
+                                Posso acompanhar o impacto da minha doação?
+                            </button>
+                        </h2>
+                        <div id="flush-collapseFour" class="accordion-collapse collapse" aria-labelledby="flush-headingFour"
+                            data-bs-parent="#accordionFlushExample">
+                            <div class="accordion-body">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tempore nulla facere,
+                                cum corrupti consectetur enim aliquid laboriosam quo vel saepe harum ratione animi
+                                sapiente, doloribus explicabo. Est dolorem nisi mollitia cupiditate similique,
+                                magnam ipsum debitis.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Parte do scroll -->
+    <a href="#" class="scroll-top active">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white" class="bi bi-arrow-up"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5" />
+        </svg>
+    </a>
+
+    <!-- footer -->
+    <footer>
+        <section class="py-3 py-md-5 py-xl-6 py-xxl-7 border-bottom border-top cor-backgroud-footer mt-2">
+            <div class="container">
+                <!-- Logo -->
+                <div class="row gy-3 align-items-center">
+                    <div class="col-12 col-md-3 text-center text-md-start">
+                        <a class="navbar-brand" href="#" target="_self">
+                            <img src="assets/icons/logo-getinfo.png" alt="Logo">
+                        </a>
+                    </div>
+
+                    <!-- Coluna Acessos Rápidos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Acessos Rápidos</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="index.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Início
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="sobre-nos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Sobre Nós
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="como-doar.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Como doar
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="contatos-html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Contatos
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de Serviços -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6 mx-auto">Serviços</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="termos.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Termo de Adesão Contratual
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="politica-de-privacidade.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Política de Privacidade
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#!"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Trabalhe conosco
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Coluna de contatos -->
+                    <div class="col-12 col-md-3">
+                        <div class="link-wrapper">
+                            <h4 class="mb-3 fw-bold fs-6">Fale conosco</h4>
+                            <ul class="m-0 list-unstyled">
+                                <li class="mb-1">
+                                    <a href="contato.html"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary cor-hover-link-footer">
+                                        Entre em contato conosco aqui
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-facebook"></i>/facebook
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-instagram"></i>/Instagram
+                                    </a>
+                                </li>
+                                <li class="mb-1">
+                                    <a href="#"
+                                        class="link-underline-opacity-0 link-opacity-75-hover link-underline-opacity-100-hover link-offset-1 link-secondary">
+                                        <i class="bi bi-twitter-x"></i>/X <!-- Ficou estranho -->
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- Fim Footer -->
+
+    <!-- Bootstrap JS -->
+    <script src="static/contato_e_duvidas.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="static/index.js"></script>
+</body>
+
+</html>

@@ -36,8 +36,8 @@
                 <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
                     <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
                     <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
-                    <li><a href="como-doar.html" class="nav-link px-2 link-dark">Como Doar</a></li>
-                    <li><a href="contatos.html" class="nav-link px-2 link-dark">Contato</a></li>
+                    <li><a href="contato_e_duvidas.html#duvidas" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contato_e_duvidas.html#contato" class="nav-link px-2 link-dark">Contato</a></li>
                 </ul>
 
                 <!-- Icone do usuário com dropdown -->
@@ -195,7 +195,8 @@
             </div>
         </section>
 
-        <div class="modal fade" id="confirmacaoModal" tabindex="-1" aria-labelledby="confirmacaoModalLabel" aria-hidden="true">
+        <div class="modal fade" id="confirmacaoModal" tabindex="-1" aria-labelledby="confirmacaoModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -206,17 +207,20 @@
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
                     </div>
                     <div class="modal-body">
-                        Você confirma que deseja doar R$ <span id="valorDoacaoModal" class="fw-bold"></span> para a campanha <strong>TÍTULO DO PROJETO</strong>?
+                        Você confirma que deseja doar R$ <span id="valorDoacaoModal" class="fw-bold"></span> para a
+                        campanha <strong>TÍTULO DO PROJETO</strong>?
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancelar</button>
+                        <button type="button" class="btn btn-outline-secondary"
+                            data-bs-dismiss="modal">Cancelar</button>
                         <button type="button" class="btn btn-primary" id="btnConfirmar">Confirmar</button>
                     </div>
                 </div>
             </div>
         </div>
-        
-        <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+
+        <div class="modal fade" id="sucessoModal" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true"
+            data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -230,7 +234,8 @@
                         <p>Doação realizada com sucesso! Obrigado pelo seu apoio.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="alterarTela('voltaCampanha')">Fechar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                            onclick="alterarTela('voltaCampanha')">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -245,24 +250,26 @@
                         <div class="text-center">
                             <h4 class="text-primary fw-bold">R$ <span id="valorDoacaoPix"></span></h4>
                         </div>
-        
+
                         <div class="col-12 text-center">
                             <img src="assets/images/qrcode.png" alt="Qr Code Pix" class="img-fluid">
                         </div>
                         <div class="col-12 mt-3">
                             <label for="pixChave" class="form-label">Chave PIX:</label>
                             <div class="input-group">
-                                <input type="text" class="form-control" name="pixChave" id="pixChave" value="3ac4b7e8-12d3-45f9-9c8d-getinfo123456" required disabled>
-                                <button class="btn btn-outline-secondary" onclick="copyPix()" type="button" id="copyPix">
+                                <input type="text" class="form-control" name="pixChave" id="pixChave"
+                                    value="3ac4b7e8-12d3-45f9-9c8d-getinfo123456" required disabled>
+                                <button class="btn btn-outline-secondary" onclick="copyPix()" type="button"
+                                    id="copyPix">
                                     <i class="bi bi-copy"></i>
                                 </button>
                             </div>
                         </div>
-        
+
                         <div id="alertCopy" class="alert alert-success mt-2 d-none" role="alert">
                             Chave PIX copiada com sucesso!
                         </div>
-        
+
                         <div class="col-12 d-flex justify-content-end mt-3">
                             <button class="btn btn-success" id="btnConfirmarPix">Confirmar Pagamento</button>
                             <button class="btn btn-danger ms-1" onclick="alterarTela('voltar')">Voltar</button>
@@ -272,7 +279,8 @@
             </div>
         </section>
 
-        <div class="modal fade" id="validacaoModal" tabindex="-1" aria-labelledby="validacaoModalLabel" aria-hidden="true">
+        <div class="modal fade" id="validacaoModal" tabindex="-1" aria-labelledby="validacaoModalLabel"
+            aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -289,7 +297,8 @@
             </div>
         </div>
 
-        <div class="modal fade" id="sucessoModalPix" tabindex="-1" aria-labelledby="sucessoModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+        <div class="modal fade" id="sucessoModalPix" tabindex="-1" aria-labelledby="sucessoModalLabel"
+            aria-hidden="true" data-backdrop="static" data-keyboard="false">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -303,7 +312,8 @@
                         <p>Doação realizada com sucesso! Obrigado pelo seu apoio.</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-success" data-bs-dismiss="modal" onclick="alterarTela('voltaCampanha')">Fechar</button>
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                            onclick="alterarTela('voltaCampanha')">Fechar</button>
                     </div>
                 </div>
             </div>
@@ -311,10 +321,83 @@
 
         <section class="container">
             <div id="campoItemFisico" class="hidden">
-                <h2>Campo para Doação de Item Físico</h2>
-                <input type="number" placeholder="Valor da doação" />
-                <button class="btn btn-success">Continuar</button>
-                <button class="btn btn-danger" onclick="alterarTela('voltar')">Voltar</button>
+                <div class="row border p-2 mb-2">
+                    <div class="col-12 col-md-6 mt-4">
+                        <label for="nomeCompleto" class="form-label mt-2">Nome Completo: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="nomeCompleto" value="Lorem Ipsum da Silva Santos" required disabled>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="cpfPessoa" class="form-label mt-2">CPF: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="cpfPessoa" value="123.***.***-99" required disabled>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="emailPessoa" class="form-label mt-2">E-mail: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="email" class="form-control" name="emailPessoa" value="lorem@souunit.com.br" required disabled>
+                        </div>
+                    </div>
+        
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="telefonePessoa" class="form-label mt-2">Telefone: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="tel" class="form-control" name="telefonePessoa" value="(79) 91234-5678" required disabled>
+                        </div>
+                    </div>
+                </div>
+                
+                <div id="itensDoacao">
+                    <!-- Primeiro item, que será clonado para adicionar mais -->
+                    <div id="itemFisico" class="item mb-4 border p-3">
+                        <div class="row">
+                            <!-- Campos específicos do item de doação -->
+                            <div class="col-12 mt-2">
+                                <label for="itemTitulos" class="form-label mt-2">Nome do item: <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <input type="text" name="itemTitulos" id="itemTitulos" class="form-control">
+                                </div>
+                            </div>
+        
+                            <div class="col-12 mt-2">
+                                <label for="estadoConserva" class="form-label mt-2">Estado de Conservação: <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <select name="estadoConserva[]" class="form-control">
+                                        <option value="" disabled selected>Selecione o estado de conservação</option>
+                                        <option value="novo">Novo (Nunca usado)</option>
+                                        <option value="otimo">Ótimo (Usado, sem sinais de desgaste)</option>
+                                        <option value="bom">Bom (Usado, com marcas leves)</option>
+                                        <option value="regular">Regular (Usado, com sinais de desgaste)</option>
+                                        <option value="ruim">Ruim (Usado, com defeitos)</option>
+                                    </select>
+                                </div>
+                            </div>
+        
+                            <div class="col-12 mt-2">
+                                <label for="obsDoacao" class="form-label mt-2">Observações <span class="text-danger">*</span></label>
+                                <div class="input-group">
+                                    <textarea name="obsDoacao[]" rows="5" class="form-control" placeholder="Descreva o item..."></textarea>
+                                </div>
+                            </div>
+        
+                            <div class="col-12 d-flex justify-content-end mt-3">
+                                <button class="btn btn-danger" onclick="removerItem(this)">Remover Item</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-12 d-flex justify-content-start mt-3 mb-3">
+                    <button class="btn btn-primary" onclick="adicionarItem()">Adicionar Item</button>
+                </div>
+        
+                <div class="col-12 d-flex justify-content-end mt-3">
+                    <button class="btn btn-success" id="btnConfirmarDoacao">Confirmar Doação</button>
+                </div>
             </div>
         </section>
     </main>
@@ -437,4 +520,5 @@
     <script src="static/registro.js"></script>
     <script src="static/doar.js"></script>
 </body>
+
 </html>

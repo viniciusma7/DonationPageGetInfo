@@ -3,7 +3,7 @@
 
 /* Variáveis */
 :root {
-    --blue-getinfo: #a3f2ef;
+    --blue-getinfo: #0f3bff;
     --gray-getinfo: #595454;
     --white: #fff;
     --white-bg: #fafafa;
@@ -82,7 +82,7 @@ header ul li .nav-link:hover {
 }
 
 /* Main */
-/* Efeito das coisas surgindo -> Usado em index.html */
+/* Efeito das coisas surgindo -> Usado em index.html e no contato_e_duvidas*/
 [data-anime] {
     opacity: 0;
     transition: 1s;
@@ -347,7 +347,7 @@ div #myTabContent {
     opacity: 0;
     width: 44px;
     height: 44px;
-    background: #808080;
+    background: #0f3bff;
     border-radius: 100%;
     transition: .3s;
     z-index: 11
