@@ -4,6 +4,7 @@ function alterarTela(tipo) {
     let campoDinheiro = document.getElementById('campoDinheiro');
     let campoItemFisico = document.getElementById('campoItemFisico');
     let campoPix = document.getElementById('gerarPix');
+    let campoItemFisico2 = document.getElementById('campoItemFisico2');
     let cartaoSelecionado = document.getElementById('pagamentoCartao').checked;
     let pixSelecionado = document.getElementById('pagamentoPix').checked;
 
@@ -36,13 +37,21 @@ function alterarTela(tipo) {
         } else {
             window.alert("Insira um valor para doar.");
         }
-    } else if (tipo === 'voltaCampanha') {
+    } else if (tipo === "prosseguirFisico") {
+        campoItemFisico.classList.remove('active');
+        campoItemFisico.classList.add('hidden');
+        campoItemFisico2.classList.remove('hidden');
+        campoItemFisico2.classList.add('active');
+    }
+     else if (tipo === 'voltaCampanha') {
         location.href = "tela_campanha_autenticado.html";
     } else {
         campoPix.classList.remove('active');
         campoPix.classList.add('hidden');
         campoItemFisico.classList.remove('active');
         campoItemFisico.classList.add('hidden');
+        campoItemFisico2.classList.remove('active');
+        campoItemFisico2.classList.add('hidden');
         campoDinheiro.classList.remove('active');
         campoDinheiro.classList.add('hidden');
         escolhaDoacao.classList.add('active');
@@ -70,6 +79,21 @@ document.getElementById('btnConfirmarPix').addEventListener('click', function ()
 
         setTimeout(function () {
             $('#sucessoModalPix').modal('show');
+        }, 500); 
+
+    }, 3000);
+});
+
+document.getElementById('btnConfirmarFisico').addEventListener('click', function () {
+    $('#solicitacaoPedido').modal('show');
+
+    document.getElementById('btnConfirmarFisico').style.display = 'none';
+
+    setTimeout(function () {
+        $('#solicitacaoPedido').modal('hide');
+
+        setTimeout(function () {
+            $('#sucessoPedido').modal('show');
         }, 500); 
 
     }, 3000);
@@ -142,3 +166,25 @@ $('#sucessoModal').on('hidden.bs.modal', function (e) {
 $('#sucessoModalPix').on('hidden.bs.modal', function (e) {
     alterarTela('voltaCampanha');
 });
+
+// Função para adicionar um novo item de doação
+function adicionarItem() {
+    const itemOriginal = document.querySelector('#itemFisico');
+    const novoItem = itemOriginal.cloneNode(true);
+
+    novoItem.querySelectorAll('input, select, textarea').forEach(field => {
+        if (field.type !== 'button') field.value = '';
+    });
+
+    document.getElementById('itensDoacao').appendChild(novoItem);
+}
+
+// Função para remover um item de doação
+function removerItem(button) {
+    const item = button.closest('.item');
+    if (document.getElementsByClassName('item').length > 1) {
+        item.remove();
+    } else {
+        window.alert("Precisa ter no mínimo 1 item para doação");
+    }
+}

@@ -36,8 +36,8 @@
                 <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0 ms-auto">
                     <li><a href="index.html" class="nav-link px-2 link-dark">Início</a></li>
                     <li><a href="index.html#quem-somos" class="nav-link px-2 link-dark">Sobre Nós</a></li>
-                    <li><a href="contato_e_duvidas.html#duvidas" class="nav-link px-2 link-dark">Como Doar</a></li>
-                    <li><a href="contato_e_duvidas.html#contato" class="nav-link px-2 link-dark">Contato</a></li>
+                    <li><a href="como-doar.html" class="nav-link px-2 link-dark">Como Doar</a></li>
+                    <li><a href="contatos.html" class="nav-link px-2 link-dark">Contato</a></li>
                 </ul>
 
                 <!-- Icone do usuário com dropdown -->
@@ -319,52 +319,161 @@
             </div>
         </div>
 
+        <div class="modal fade" id="solicitacaoPedido" tabindex="-1" aria-labelledby="solicitacaoPedidoLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="solicitacaoPedidoLabel">
+                            <i class="bi bi-hourglass-split" style="color: #007bff;"></i>
+                            Enviando Solicitação
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p>Estamos enviando sua solicitação para a GetInfo...</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sucessoPedido" tabindex="-1" aria-labelledby="sucessoModalLabel"
+            aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="sucessoModalLabel">
+                            <i class="bi bi-check-circle" style="color: #28a745;"></i>
+                            Solicitação Enviada
+                        </h5>
+                        <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Fechar"></button> -->
+                    </div>
+                    <div class="modal-body">
+                        <p>Solicitação Enviada com sucesso! A equipe da GetInfo deve entrar em contato com você em alguns instantes.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-success" data-bs-dismiss="modal"
+                            onclick="alterarTela('voltaCampanha')">Fechar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <section class="container">
             <div id="campoItemFisico" class="hidden">
                 <div class="row border p-2 mb-2">
-                    <div class="col-12 col-md-6 mt-4">
-                        <label for="nomeCompleto" class="form-label mt-2">Nome Completo: <span class="text-danger">*</span></label>
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="nomeCompleto" class="form-label mt-2">Nome Completo: <span
+                                class="text-danger">*</span></label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="nomeCompleto" value="Lorem Ipsum da Silva Santos" required disabled>
+                            <input type="text" class="form-control" name="nomeCompleto"
+                                value="Lorem Ipsum da Silva Santos" required disabled>
                         </div>
                     </div>
-        
+
                     <div class="col-12 col-md-6 mt-2">
                         <label for="cpfPessoa" class="form-label mt-2">CPF: <span class="text-danger">*</span></label>
                         <div class="input-group">
-                            <input type="text" class="form-control" name="cpfPessoa" value="123.***.***-99" required disabled>
+                            <input type="text" class="form-control" name="cpfPessoa" value="123.***.***-99" required
+                                disabled>
                         </div>
                     </div>
-        
+
                     <div class="col-12 col-md-6 mt-2">
-                        <label for="emailPessoa" class="form-label mt-2">E-mail: <span class="text-danger">*</span></label>
+                        <label for="emailPessoa" class="form-label mt-2">E-mail: <span
+                                class="text-danger">*</span></label>
                         <div class="input-group">
-                            <input type="email" class="form-control" name="emailPessoa" value="lorem@souunit.com.br" required disabled>
+                            <input type="email" class="form-control" name="emailPessoa" value="lorem@souunit.com.br"
+                                required disabled>
                         </div>
                     </div>
-        
+
                     <div class="col-12 col-md-6 mt-2">
-                        <label for="telefonePessoa" class="form-label mt-2">Telefone: <span class="text-danger">*</span></label>
+                        <label for="telefonePessoa" class="form-label mt-2">Telefone: <span
+                                class="text-danger">*</span></label>
                         <div class="input-group">
-                            <input type="tel" class="form-control" name="telefonePessoa" value="(79) 91234-5678" required disabled>
+                            <input type="tel" class="form-control" name="telefonePessoa" value="(79) 91234-5678"
+                                required disabled>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="cepEndereco" class="form-label">CEP: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="cepEndereco" id="cepEndereco" value="49032-490" required>
+                        </div>
+                        <div id="cepErro" class="form-text text-danger"></div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="ruaEndereco" class="form-label">Rua: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="ruaEndereco" id="ruaEndereco" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="numeroEndereco" class="form-label">Número: <span
+                                class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="numeroEndereco" id="numeroEndereco" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="bairroEndereco" class="form-label">Bairro: <span
+                                class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="bairroEndereco" id="bairroEndereco" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="cidadeEndereco" class="form-label">Cidade: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="cidadeEndereco" id="cidadeEndereco" required>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-md-6 mt-2">
+                        <label for="ufEndereco" class="form-label">Estado: <span class="text-danger">*</span></label>
+                        <div class="input-group">
+                            <input type="text" class="form-control" name="ufEndereco" id="ufEndereco" required>
                         </div>
                     </div>
                 </div>
-                
+
+                <div class="col-12 d-flex justify-content-end mt-3">
+                    <button class="btn btn-danger" id="btnConfirmarDoacao"
+                        onclick="alterarTela('voltar')">Voltar</button>
+                    <button class="btn btn-success ms-2" id="btnConfirmarDoacao" onclick="alterarTela('prosseguirFisico')">Prosseguir</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div id="campoItemFisico2" class="hidden">
                 <div id="itensDoacao">
-                    <!-- Primeiro item, que será clonado para adicionar mais -->
                     <div id="itemFisico" class="item mb-4 border p-3">
                         <div class="row">
-                            <!-- Campos específicos do item de doação -->
-                            <div class="col-12 mt-2">
-                                <label for="itemTitulos" class="form-label mt-2">Nome do item: <span class="text-danger">*</span></label>
+                            <div class="col-8 mt-2">
+                                <label for="itemTitulos" class="form-label mt-2">Nome do item: <span
+                                        class="text-danger">*</span></label>    
                                 <div class="input-group">
                                     <input type="text" name="itemTitulos" id="itemTitulos" class="form-control">
                                 </div>
                             </div>
-        
+                            <div class="col-4 mt-2">
+                                <label for="qtdItem" class="form-label mt-2">Quantidade do Item: <span
+                                        class="text-danger">*</span></label>    
+                                <div class="input-group">
+                                    <input type="number" name="qtdItem" id="qtdItem" class="form-control">
+                                </div>
+                            </div>
+
                             <div class="col-12 mt-2">
-                                <label for="estadoConserva" class="form-label mt-2">Estado de Conservação: <span class="text-danger">*</span></label>
+                                <label for="estadoConserva" class="form-label mt-2">Estado de Conservação: <span
+                                        class="text-danger">*</span></label>
                                 <div class="input-group">
                                     <select name="estadoConserva[]" class="form-control">
                                         <option value="" disabled selected>Selecione o estado de conservação</option>
@@ -376,14 +485,16 @@
                                     </select>
                                 </div>
                             </div>
-        
+
                             <div class="col-12 mt-2">
-                                <label for="obsDoacao" class="form-label mt-2">Observações <span class="text-danger">*</span></label>
+                                <label for="obsDoacao" class="form-label mt-2">Observações <span
+                                        class="text-danger">*</span></label>
                                 <div class="input-group">
-                                    <textarea name="obsDoacao[]" rows="5" class="form-control" placeholder="Descreva o item..."></textarea>
+                                    <textarea name="obsDoacao[]" rows="5" class="form-control"
+                                        placeholder="Descreva o item..."></textarea>
                                 </div>
                             </div>
-        
+
                             <div class="col-12 d-flex justify-content-end mt-3">
                                 <button class="btn btn-danger" onclick="removerItem(this)">Remover Item</button>
                             </div>
@@ -394,9 +505,10 @@
                 <div class="col-12 d-flex justify-content-start mt-3 mb-3">
                     <button class="btn btn-primary" onclick="adicionarItem()">Adicionar Item</button>
                 </div>
-        
-                <div class="col-12 d-flex justify-content-end mt-3">
-                    <button class="btn btn-success" id="btnConfirmarDoacao">Confirmar Doação</button>
+
+                <div class="col-12 d-flex justify-content-end mt-3 mb-3">
+                    <button class="btn btn-danger" onclick="alterarTela('voltar')">Voltar</button>
+                    <button class="btn btn-success ms-2" id="btnConfirmarFisico">Concluir Solicitação</button>
                 </div>
             </div>
         </section>
@@ -519,6 +631,19 @@
     <script src="static/index.js"></script>
     <script src="static/registro.js"></script>
     <script src="static/doar.js"></script>
+
+    <script>
+        // Improviso, mas o backend já deveria trazer as informações do usuário sem precisar desse evento.
+        window.onload = function () {
+        let cep = document.getElementById("cepEndereco");
+
+        $(cep).inputmask("99999-999");
+
+        cep.addEventListener("blur", function () { buscaCep(cep); });
+
+        buscaCep(cep);
+    };
+    </script>
 </body>
 
 </html>
